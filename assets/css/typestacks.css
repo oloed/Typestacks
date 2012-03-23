@@ -1,0 +1,126 @@
+* {
+	margin: 0;
+	padding: 0;
+	
+	-webkit-font-smoothing: antialiased;
+}
+
+.centre, #js_warning p, .bar {
+	display: block;
+	margin: 0 auto;
+	
+	width: 80%;
+	max-width: 1620px;
+}
+
+html {
+	height: 100%;
+
+	background-color: #5fa9d8;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#3d7ec5), to(#81d5eb));
+	background-image: -webkit-linear-gradient(top, #3d7ec5, #81d5eb);
+	background-image: -moz-linear-gradient(top, #3d7ec5, #81d5eb);
+	background-image: -o-linear-gradient(top, #3d7ec5, #81d5eb);
+	background-image: -ms-linear-gradient(top, #3d7ec5, #81d5eb);
+	background-image: linear-gradient(top, #3d7ec5, #81d5eb);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3d7ec5', EndColorStr='#81d5eb');
+}
+
+body {
+	font: 15px/24px "Helvetica Neue", sans-serif;
+	color: #5f6f77;
+	text-shadow: 0 1px 0 rgba(255,255,255,.25);
+	
+	overflow: hidden;
+}
+
+
+/* Ain't no crazy Javascript. */
+#js_warning {
+	background: #fff;
+	padding: 20px 0;
+	
+	-webkit-box-shadow: inset 0 -1px 1px #eef6f9, 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: inset 0 -1px 1px #eef6f9, 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: inset 0 -1px 1px #eef6f9, 0 1px 2px rgba(0,0,0,.2);
+}
+	#js_warning a {
+		color: #2284c5;
+		text-decoration: none;
+		
+		border-bottom: 1px solid #99cdef;
+	}
+		#js_warning a:hover {
+			border-bottom-color: #71a7d4;
+		}
+	#js_warning p {
+		background: url('../img/nojs.gif') no-repeat 0 5px;
+		padding: 10px 0 10px 60px;
+		
+		line-height: 30px;
+	}
+		
+		
+/* Styling the bar */
+div.bar {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	
+	margin: -35px 0 0 -600px;
+	
+	height: 100%;
+	width: 100%;
+	
+	-webkit-box-reflect: below -22px -webkit-linear-gradient(top, transparent, transparent, rgba(0,0,0,.4));
+}
+	div.bar:after {
+		content: '';
+		display: block;
+
+		position: absolute;
+		right: 10%;
+		top: 0;
+		z-index: 10;
+		
+		height: 71px;
+		width: 40%;
+		
+		background: url('../img/bar.png') 100% 0;
+		
+		-webkit-transform: translateX(-1px);
+		-moz-transform: translateX(-1px);
+		-ms-transform: translateX(-1px);
+		-o-transform: translateX(-1px);
+		transform: translateX(-1px);
+	}
+section.bar {
+	background: url('../img/bar.png');
+	
+	height: 71px;
+	width: 60%;
+	margin-left: -10%;
+}
+
+a.logo {
+	display: block;
+	float: left;
+	padding: 16px 23px 16px 39px;
+}
+
+form {
+	position: relative;
+}
+	form p {
+		float: left;
+		padding: 0 20px;
+		
+		line-height: 60px;
+	}
+
+/* Media queries */
+@media (max-width: 1650px) {
+	div.bar {
+		margin-left: -40%;
+	}
+}
